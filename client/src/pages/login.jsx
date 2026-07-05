@@ -61,7 +61,7 @@ export default function Login() {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 required={!isLogin}
-                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-brand"
                 placeholder="John Doe"
               />
             </div>
@@ -74,7 +74,7 @@ export default function Login() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-brand"
               placeholder="you@example.com"
             />
           </div>
@@ -86,7 +86,7 @@ export default function Login() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
-              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-brand"
               placeholder="••••••••"
             />
           </div>
@@ -106,7 +106,7 @@ export default function Login() {
               setIsLogin(!isLogin);
               setError(''); // Clear errors when flipping sides
             }}
-            className="text-blue-600 hover:underline"
+            className="text-brand hover:underline"
           >
             {isLogin ? 'Sign Up' : 'Log In'}
           </button>
