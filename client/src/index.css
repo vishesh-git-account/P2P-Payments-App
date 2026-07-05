@@ -1,5 +1,14 @@
 @import "tailwindcss";
 
+/* This is the new Tailwind v4 way to create a theme!
+  Every color defined here automatically creates a background, text, and border class.
+*/
+@theme {
+  --color-brand-light: #34d399;
+  --color-brand: #10b981;
+  --color-brand-dark: #059669;
+}
+
 body {
   background-color: #f3f4f6; /* Soft gray background */
 }
