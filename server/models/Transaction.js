@@ -4,12 +4,14 @@ const transactionSchema = new mongoose.Schema({
   sender: { 
     type: mongoose.Schema.Types.ObjectId, 
     ref: 'User', 
-    required: true 
+    required: true,
+    index: true // 🚀 Instantly look up all money a user sent
   },
   receiver: { 
     type: mongoose.Schema.Types.ObjectId, 
     ref: 'User', 
-    required: true 
+    required: true,
+    index: true // 🚀 Instantly look up all money a user received
   },
   amount: { 
     type: Number, 
@@ -18,15 +20,17 @@ const transactionSchema = new mongoose.Schema({
   status: { 
     type: String, 
     enum: ['pending', 'completed', 'failed'], 
-    default: 'pending' 
+    default: 'pending',
+    index: true // 🚀 Speeds up dashboard filtering
   },
   stripePaymentIntentId: { 
-    type: String ,
+    type: String,
     required: true
   },
   createdAt: { 
     type: Date, 
-    default: Date.now 
+    default: Date.now,
+    index: true // 🚀 Speeds up your Cron Job garbage collector!
   }
 });
 

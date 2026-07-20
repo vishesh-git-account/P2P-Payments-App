@@ -3,12 +3,13 @@ const mongoose = require('mongoose');
 const userSchema = new mongoose.Schema({
   name: { 
     type: String, 
-    required: true 
+    required: true,
+    index: true // 🚀 NEW: Makes your Search Bar lightning fast
   },
   email: { 
     type: String, 
     required: true, 
-    unique: true 
+    unique: true // (This automatically creates a unique index!)
   },
   password: { 
     type: String, 
